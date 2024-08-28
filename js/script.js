@@ -1,35 +1,40 @@
 // #  Fase di Preparazione
+//recupero la lista dal DOM
+const teamList = document.getElementById('team-list');
+//creo lista vuota
+// let list; // ! se uso questa variabile la prima cosa stampata in pagina da "undefined"
+let list = '';
 //creo l'array di oggetti
 const ourTeam = [
     //creo gli oggetti...
     {
         //...contenenti le infomrazioni delle singole persone
-        nome: 'Wayne Barnett',
+        name: 'Wayne Barnett',
         profession: 'Founder & CEO',
         profilePic: 'wayne-barnett-founder-ceo.jpg'
     },
     {
-        nome: 'Angela Caroll',
+        name: 'Angela Caroll',
         profession: 'Chief Editor',
         profilePic: 'angela-caroll-chief-editor.jpg'
     },
     {
-        nome: 'Walter Gordon',
+        name: 'Walter Gordon',
         profession: 'Office Manager',
         profilePic: 'walter-gordon-office-manager.jpg'
     },
     {
-        nome: 'Angela Lopez',
+        name: 'Angela Lopez',
         profession: 'Social Media Manager',
         profilePic: 'angela-lopez-social-media-manager.jpg'
     },
     {
-        nome: 'Scott Estrada',
+        name: 'Scott Estrada',
         profession: 'Developer',
         profilePic: 'scott-estrada-developer.jpg'
     },
     {
-        nome: 'Barbara Ramos',
+        name: 'Barbara Ramos',
         profession: 'Graphic Designer',
         profilePic: 'barbara-ramos-graphic-designer.jpg'
     }
@@ -41,9 +46,22 @@ for (let i = 0; i < ourTeam.length; i++) {
     const person = ourTeam[i];
     console.log(person);
     //Stampo in console i campi degli oggetti
-    // ? console.log(`Full-Name: `, person.nome); //loggo il nome e cognome della persona
-    // ? console.log('Profession: ', person.profession); //loggo la professione della persona
-    // ? console.log('Profile Picture: ', person.profilePic); //stampo la foto come stringa
+    console.log(`Full-Name: `, person.name); //loggo il nome e cognome della persona
+    console.log('Profession: ', person.profession); //loggo la professione della persona
+    console.log('Profile Picture: ', person.profilePic); //stampo la foto come stringa
     // TODO: Stamparli in pagina sotto forma di lista
+    //creo le variabili per le chiavi dei singoli oggetti
+    const name = person.name;
+    const profession = person.profession;
+    const pic = person.profilePic;
+    console.log(name, profession, pic);
+    //creo la lista
+    list +=
+        `<h1>${name}</h1>
+        <li>${profession}</li>
+        <li>${pic}</li>
+    `
 }
 
+//inserire gli elementi lista nel DOM
+teamList.innerHTML = list;
