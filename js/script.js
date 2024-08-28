@@ -39,8 +39,11 @@ const ourTeam = [
 for (let i = 0; i < ourTeam.length; i++) {
     //...recupero il singolo oggetto
     const person = ourTeam[i];
+    console.log(person);
     //Stampo in console i campi degli oggetti
-    console.log(`Full-Name: `, person.nome); //loggo il nome e cognome della persona
-    console.log('Profession: ', person.profession); //loggo la professione della persona
-    console.log('Profile Picture: ', person.profilePic); //stampo la foto come stringa
+    // ? console.log(`Full-Name: `, person.nome); //loggo il nome e cognome della persona
+    // ? console.log('Profession: ', person.profession); //loggo la professione della persona
+    // ? console.log('Profile Picture: ', person.profilePic); //stampo la foto come stringa
+    // TODO: Stamparli in pagina sotto forma di lista
 }
+
