@@ -59,7 +59,9 @@ for (let i = 0; i < ourTeam.length; i++) {
     list +=
         `<h1>${name}</h1>
         <li>${profession}</li>
-        <li>${pic}</li>
+        <li>
+        <img src="img/${pic}">
+        </li>
     `
 }
 
