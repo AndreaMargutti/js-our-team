@@ -49,19 +49,22 @@ for (let i = 0; i < ourTeam.length; i++) {
     console.log(`Full-Name: `, person.name); //loggo il nome e cognome della persona
     console.log('Profession: ', person.profession); //loggo la professione della persona
     console.log('Profile Picture: ', person.profilePic); //stampo la foto come stringa
-    // TODO: Stamparli in pagina sotto forma di lista
     //creo le variabili per le chiavi dei singoli oggetti
     const name = person.name;
     const profession = person.profession;
     const pic = person.profilePic;
     console.log(name, profession, pic);
-    //creo la lista
+    //creo la lista con l'immagine
     list +=
-        `<h1>${name}</h1>
-        <li>${profession}</li>
-        <li>
-        <img src="img/${pic}">
-        </li>
+        `<div class="col">
+            <div class="card h-100" style="width: 18rem;">
+               <img src="img/${pic}" class="card-img-top"> 
+               <div class="card-body">
+                    <h1 class="text-center">${name}</h1>
+                    <p class="text-center">${profession}</p>
+                </div>
+            </div>
+        </div>
     `
 }
 
